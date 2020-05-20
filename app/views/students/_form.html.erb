@@ -1,0 +1,55 @@
+<%= form_with(model: student, local: true) do |form| %>
+  <% if student.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(student.errors.count, "error") %> prohibited this student from being saved:</h2>
+
+      <ul>
+        <% student.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+<center>
+  
+<div style="border: 5px;background: beige; width: 550px";> 
+
+<br>
+<br>
+
+  <div class="field">
+    <%= form.text_field :first_name, size: 50, placeholder: "first_name", style: 'height: 25px' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :last_name, size: 50, placeholder: "last_name", style: 'height: 25px' %>
+  </div>
+
+  <div class="field">
+    <%= form.number_field :age, placeholder: "age", style: 'width: 410px; height: 25px' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :mobile, size: 50, placeholder: "mobile", style: 'height: 25px' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_area :address, size: 50, placeholder: "address", style: 'width: 410px' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :gender, size: 50, placeholder: "gender", style: 'height: 25px' %>
+  </div>
+
+  <div class="field">
+    <%= form.label "is_active" %>
+    <%= form.check_box :is_active %>
+  </div>
+
+  <div class="actions" >
+    <%= form.submit %>
+  </div>
+  </center>
+
+</div>
+<% end %>
