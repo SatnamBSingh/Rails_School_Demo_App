@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+<center>
+	<div style= "background: whitesmoke; padding: 50px 15px;">
+<p>
+  <strong>Title:</strong>
+  <%= @article.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @article.description %>
+</p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Back', articles_path %>
+</div>
+</center>
