@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-
-
+<center>
 <div style= "background: lightgrey;">
 <table>
   <thead>
@@ -16,9 +15,9 @@
       <tr>
         <td><%= article.title %></td>
         <td><%= article.description %></td>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', article, class: "primary_button" %></td>
+        <td><%= link_to 'Edit', edit_article_path(article), class: "secondary_button" %></td>
+        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "tertary_button" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,3 +27,24 @@
 <br>
 
 </center>
+<style media="screen", type="text/css">
+  .primary_button{
+    padding: 5px 20px;
+    background: dodgerblue;
+    color: white;
+  }
+</style>
+<style media="screen", type="text/css">
+  .secondary_button{
+    color: white;
+    background: yellow;
+    padding: 5px 20px;
+  }
+</style>
+<style media="screen">
+  .tertary_button{
+    color: white;
+    background: red;
+    padding: 5px 20px;
+  }
+</style>
