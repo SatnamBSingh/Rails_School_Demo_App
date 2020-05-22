@@ -11,15 +11,13 @@
     </div>
   <% end %>
 <center>
-  <div style= "background: whitesmoke; padding: 25px 15px;">
-  <div style= "padding: 10px 105px; border: white;">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+  <div style= "background: lightgrey; padding: 25px 15px;">
+  <div class="field", style= "padding: 10px 105px; border: white;">
+    <%= form.text_field :title, placeholder: 'Title', size: '50', style: 'height: 30px; border: white' %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, placeholder: 'Description',size: '50', style: 'width: 400px; border: white; height: 150px' %>
   </div>
 
   <div class="actions">
