@@ -1,7 +1,22 @@
 <center>
   <h1 style= "color: white; background: black;padding: 25px 25px;text-align: left;">WELCOME TO ALPHA BLOG
     <h4>
-      <%= link_to 'Create New Article', new_article_path %>&nbsp; &nbsp; &nbsp<%= link_to 'Articles', articles_path %>
+      <%= link_to 'Create New Article', new_article_path, class: "newarticle_button" %>&nbsp; &nbsp; &nbsp
+      <%= link_to 'Articles', articles_path, class: "articlelist_button" %>
     </h4>
   </h1>
 </center>
+<style media="screen", type="text/css">
+  .newarticle_button{
+    color: white;
+    background: dodgerblue;
+    padding: 10px 35px;
+  }
+</style>
+<style media="screen", type="text/css">
+  .articlelist_button{
+      color: white;
+      background: dodgerblue;
+      padding: 10px 40px;
+  }
+</style>
